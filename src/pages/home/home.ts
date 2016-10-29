@@ -92,6 +92,44 @@ export class HomePage {
 
   }
 
+  loginCustom(email, password){
+
+    this.showLoader();
+
+    let loginData = {
+        'email': email,
+        'password': password
+    };
+
+    // hide the in app browser. If you need to collection additional data outside of the app
+    // using the InAppBrowser, you should get rid of this.
+    let loginOptions = {
+        //'inAppBrowserOptions': {'hidden': true}
+    };
+
+    this.auth.login('custom', loginData, loginOptions).then(() => {
+
+        this.loading.dismiss();
+
+        //success
+        console.log(this.user);
+
+    }, (err) => {
+
+        this.loading.dismiss();
+
+        //error
+        console.log(err);
+
+    });
+
+  }
+
+  testLoginCustom(){
+    this.loginCustom('me@test.com', 'password');
+  }
+
+
   logout(){
     this.auth.logout();
   }
