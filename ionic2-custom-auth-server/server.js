@@ -4,6 +4,50 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var jwt = require('jsonwebtoken');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/myappdatabase');
+
+
+// if our user.js file is at app/models/user.js
+var User = require('./models/User');
+
+// create a new user called chris
+var chris = new User({
+  name: 'ChrisXX',
+  username: 'sevilayhaxx',
+  password: 'password'
+});
+
+
+var jamie = new User({
+  name: 'jamieXX',
+  username: 'jamiexx',
+  password: 'password'
+});
+// // call the custom method. this will just add -dude to his name
+// // user will now be Chris-dude
+// chris.dudify(function(err, name) {
+//   if (err) throw err;
+//
+//   console.log('Your new name is ' + name);
+// });
+
+// call the built-in save method to save to the database
+
+jamie.save(function(err) {
+  if (err) throw err;
+
+  console.log('user: jamie added');
+});
+
+chris.save(function(err) {
+  if (err) throw err;
+
+  console.log('User saved successfully!');
+});
+
+
 var secret = 'yourSuperSecretPassword'
 var app = express();
 

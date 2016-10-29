@@ -3,12 +3,10 @@
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
-
   "main": "server.js",
   "engines": {
     "node": "5.9.1"
   },
-
   "scripts": {
     "build": "ionic-app-scripts build",
     "watch": "ionic-app-scripts watch",
@@ -30,21 +28,22 @@
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/platform-server": "2.0.0",
     "@ionic/storage": "1.0.3",
-    "ionic-angular": "2.0.0-rc.1",
-    "ionic-native": "2.2.3",
-    "ionicons": "3.0.0",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.21",
-
-    "express": "^4.14.0",
-    "jsonwebtoken": "^5.7.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
     "del": "2.2.0",
+    "express": "^4.14.0",
     "http": "0.0.0",
+    "ionic-angular": "2.0.0-rc.1",
+    "ionic-native": "2.2.3",
+    "ionicons": "3.0.0",
+    "jsonwebtoken": "^5.7.0",
     "method-override": "^2.3.6",
-    "morgan": "^1.7.0"
-},
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0",
+    "rxjs": "5.0.0-beta.12",
+    "supervisor": "^0.11.0",
+    "zone.js": "0.6.21"
+  },
   "devDependencies": {
     "@ionic/app-scripts": "^0.0.36",
     "typescript": "^2.0.3"
