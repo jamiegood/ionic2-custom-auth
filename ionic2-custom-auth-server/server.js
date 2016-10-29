@@ -42,7 +42,7 @@ app.get('/auth', function(req, res){
 
         // user authentication was successful, assign whatever data you want
         user_id = '123';
-        console.log('Authenticated...');
+        console.log('Authenticated now...');
     }
 
     // construct JWT and redirect to the redirect_uri
