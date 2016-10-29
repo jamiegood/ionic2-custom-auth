@@ -104,7 +104,7 @@ export class HomePage {
     // hide the in app browser. If you need to collection additional data outside of the app
     // using the InAppBrowser, you should get rid of this.
     let loginOptions = {
-        //'inAppBrowserOptions': {'hidden': true}
+        'inAppBrowserOptions': {'hidden': false}
     };
 
     this.auth.login('custom', loginData, loginOptions).then(() => {
