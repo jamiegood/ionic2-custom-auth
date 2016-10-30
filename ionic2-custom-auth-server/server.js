@@ -143,7 +143,7 @@ app.get('/auth', function(req, res){
       var user_id = '12345'
       //var email = email;
 
-      var outgoingToken = jwt.sign({"user_id": user_id, "email": email}, secret);
+      var outgoingToken = jwt.sign({"email": email, "email": email}, secret);
       var url = req.query.redirect_uri +
           '&token=' + encodeURIComponent(outgoingToken) +
           '&state=' + encodeURIComponent(req.query.state);
