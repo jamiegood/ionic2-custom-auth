@@ -148,8 +148,8 @@ app.get('/auth', function(req, res){
           '&state=' + encodeURIComponent(req.query.state);
 
 
-      return res;
-      //return res.redirect(url);
+      //return res;
+      return res.redirect(url);
     });
 
 
