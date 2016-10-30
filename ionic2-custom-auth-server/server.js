@@ -36,7 +36,7 @@ var jamie = new User({
 // });
 
 // call the built-in save method to save to the database
-// 
+//
 // jamie.save(function(err) {
 //   if (err) throw err;
 //
@@ -124,6 +124,7 @@ app.get('/auth', function(req, res){
     var password = incomingToken.data.password;
     var user_id;
 
+    console.log(email, password);
     // if(email == 'me@test.com' && password == 'password'){
     //
     //     // user authentication was successful, assign whatever data you want
@@ -139,14 +140,16 @@ app.get('/auth', function(req, res){
       console.log(user);
       console.log('Authentiated...');
 
-      var user_id = user.id;
+      var user_id = 123;
 
       var outgoingToken = jwt.sign({"user_id": user_id}, secret);
       var url = req.query.redirect_uri +
           '&token=' + encodeURIComponent(outgoingToken) +
           '&state=' + encodeURIComponent(req.query.state);
 
-      return res.redirect(url);
+
+      return res;
+      //return res.redirect(url);
     });
 
 
