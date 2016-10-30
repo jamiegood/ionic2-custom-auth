@@ -140,7 +140,7 @@ app.get('/auth', function(req, res){
       console.log(user);
       console.log('Authentiated...');
 
-      var user_id = 123;
+      var user_id = '12345';
 
       var outgoingToken = jwt.sign({"user_id": user_id}, secret);
       var url = req.query.redirect_uri +

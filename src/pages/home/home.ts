@@ -126,7 +126,7 @@ export class HomePage {
   }
 
   testLoginCustom(){
-    this.loginCustom('jamieXX', 'password');
+    this.loginCustom('me@test.com', 'password');
   }
 
 
